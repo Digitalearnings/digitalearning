@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf0;
+      padding: 2rem 1rem;
+    }
+
+    .why-nikhil-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 box per row by default (mobile) */
+      gap: 1rem;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .why-nikhil-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for tablet & desktop */
+      }
+    }
+
+    .why-nikhil-box {
+      background: #fff9e6;
+      padding: 1rem;
+      border: 1px solid #f7c948;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 1rem;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+  </style>
+
+
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
   <title>Start Earning Digitally</title>
@@ -122,30 +170,22 @@
       font-weight: bold;
     }
     .why-nikhil-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Default: 1 box per row for small screens */
-  gap: 1rem;
-  max-width: 1280px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-@media (min-width: 600px) {
-  .why-nikhil-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for screens 600px and larger */
-  }
-}
-
-.why-nikhil-box {
-  background: #fff9e6;
-  padding: 1rem;
-  border: 1px solid #f7c948;
-  border-radius: 10px;
-  text-align: left;
-  font-size: 1rem;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      max-width: 1280px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+    .why-nikhil-box {
+      background: #fff9e6;
+      padding: 1rem;
+      border: 1px solid #f7c948;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 1rem;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
     .why-nikhil-box strong {
       font-weight: bold;
     }
