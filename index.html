@@ -122,22 +122,30 @@
       font-weight: bold;
     }
     .why-nikhil-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      max-width: 1280px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .why-nikhil-box {
-      background: #fff9e6;
-      padding: 1rem;
-      border: 1px solid #f7c948;
-      border-radius: 10px;
-      text-align: left;
-      font-size: 1rem;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    }
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 box per row for small screens */
+  gap: 1rem;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .why-nikhil-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for screens 600px and larger */
+  }
+}
+
+.why-nikhil-box {
+  background: #fff9e6;
+  padding: 1rem;
+  border: 1px solid #f7c948;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
     .why-nikhil-box strong {
       font-weight: bold;
     }
@@ -147,25 +155,6 @@
   background: #fff;
   padding: 1rem 1rem;
   text-align: center;
-}
-
-.why-nikhil-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 1rem;
-  max-width: 1280px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.why-nikhil-box {
-  background: #fff7e6;
-  padding: 1.2rem;
-  border: 1px solid #f5c55e;
-  border-radius: 0.8rem;
-  font-size: 1rem;
-  text-align: left;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .signature-image {
@@ -331,8 +320,8 @@
   <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2rem; max-width: 1280px; margin: auto; text-align: left;">
     
     <div style="flex: 1 1 550px;">
-      <p>Mr. Nikhil Singh serves as a consultant and motivational speaker for leading corporations, including:</p>
-      <p>With over 6 years of proven expertise in digital marketing, business strategy, and personal development, Mr. Nikhil Singh has collaborated with renowned companies and organizations to drive growth, innovation, and mindset transformation. His engaging sessions and strategic consultations have empowered both teams and individuals to achieve measurable success.</p>
+      <p>Mr. Nikhil Singh serves as a consultant and motivational speaker for leading corporations, including: <br>
+      With over 6 years of proven expertise in digital marketing, business strategy, and personal development, Mr. Nikhil Singh has collaborated with renowned companies and organizations to drive growth, innovation, and mindset transformation. His engaging sessions and strategic consultations have empowered both teams and individuals to achieve measurable success.</p>
       
       
     <h3>Corporate Giants & Startups:</h3>
