@@ -157,31 +157,23 @@
   text-align: center;
 }
 
-..why-nikhil-grid {
+.why-nikhil-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default: 1 box per row for small screens */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   max-width: 1280px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-@media (min-width: 600px) {
-  .why-nikhil-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for screens 600px and larger */
-  }
-}
-
 .why-nikhil-box {
-  background: #fff9e6;
-  padding: 1rem;
-  border: 1px solid #f7c948;
-  border-radius: 10px;
-  text-align: left;
+  background: #fff7e6;
+  padding: 1.2rem;
+  border: 1px solid #f5c55e;
+  border-radius: 0.8rem;
   font-size: 1rem;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .signature-image {
