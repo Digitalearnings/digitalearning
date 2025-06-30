@@ -16,16 +16,31 @@
 
     .why-nikhil-grid {
       display: grid;
-      grid-template-columns: 1fr; /* 1 box per row by default (mobile) */
+      grid-template-columns: 1fr; /* Default: 1 box per row for all small screens */
       gap: 1rem;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 1rem;
     }
 
-    @media (min-width: 600px) {
+    /* Small phones */
+    @media (max-width: 480px) {
       .why-nikhil-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for tablet & desktop */
+        grid-template-columns: 1fr; /* Still 1 per row */
+      }
+    }
+
+    /* Standard mobile devices */
+    @media (max-width: 600px) {
+      .why-nikhil-grid {
+        grid-template-columns: 1fr; /* Still 1 per row */
+      }
+    }
+
+    /* Tablets & desktops */
+    @media (min-width: 768px) {
+      .why-nikhil-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for tablets and larger */
       }
     }
 
@@ -47,8 +62,7 @@
   </style>
 
 
-
-
+	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
   <title>Start Earning Digitally</title>
